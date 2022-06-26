@@ -53,8 +53,6 @@ def get_paper_sentences_with_TE(wbpids, settings):
     paperid_sentence_list = []
     for id in wbpids:
         txt = textpresso_paper_text(id, textpresso_token)
-        #with open("texttt.txt", "w") as g:
-          #g.write(str(txt))
         count_total_rows = len(txt)
 
         for current_i, row in enumerate(txt):
@@ -111,8 +109,4 @@ if __name__ == "__main__":
     settings = setSettings()
     paper_ids = ["WBPaper00050743"]
     paperid_sentence_list = get_paper_sentences_with_TE(paper_ids, settings)
-    with open("text_final.txt", "w") as f:
-        f.write(str(paperid_sentence_list))
-    end_time = time.time()
-    print(end_time-start_time)
 
