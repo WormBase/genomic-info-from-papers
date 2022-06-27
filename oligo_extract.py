@@ -1,18 +1,14 @@
-import json
-import re
-import time
-
-import nltk
-nltk.download("stopwords")
-nltk.download("punkt")
-
 import numpy as np
 import pandas as pd
 from settings import setSettings
-
 from regex_wrapper import regex_block
 from textpresso import textpresso_paper_text
-
+import json
+import re
+import time
+import nltk
+nltk.download("stopwords")
+nltk.download("punkt")
 
 def get_paper_sentences_with_TE(wbpids, settings):
     """
